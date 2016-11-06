@@ -15,12 +15,13 @@ TODO:
 - Add icons & graphics
 - Add translations
 - Try & learn proper coding style :P
+- Finish adding proper comments
 - Add MQTT support to connect to MQTT server (using M2MQTT Package by Paolo Patierno)
 - Add support for secure connection to alarm (this might be tough without access to Paradox SDK)
 - Add control options to send commands to the alarm system (arm, disarm)
 
 A FEW INFO ON THE PROTOCOL:
-I started following @Tertiush suggestion to use Wireshark and capture a few sessions between my PC (using Winload) and the alarm system. From there I created a quick app acting as a "fake" alarm panel to experiment a bit on sending data to Winload and see what happened (might share that code if someone is interested, but it's very ugly). Here are the results (this strings are the HEX bytes sent from the App (Q) and from the Alarm (A), I've added spaces to highglight the bytes with a meaning):
+I started following @Tertiush suggestion to use Wireshark and capture a few sessions between my PC (using Winload) and the alarm system. From there I created a quick app acting as a "fake" alarm panel to experiment a bit on sending data to Winload and see what happened (the code is in MainPage.xaml.cs, the file is there but not included in the solution, you have to manually import it, beware it's very ugly and not properly commented). Here are the results (this strings are the HEX bytes sent from the App (Q) and from the Alarm (A), I've added spaces to highglight the bytes with a meaning):
 
 Handshake (this is sent only once to authenticate with the alarm system):
 
