@@ -1,0 +1,103 @@
+﻿<Page
+    x:Class="Alarm.ctrlAllarme"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Alarm"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <RelativePanel >
+        <Pivot>
+            <PivotItem Header="Status" Margin="12,0,12,49">
+                <Grid>
+                    <Button x:Name="button" Content="Connect" HorizontalAlignment="Left" Height="39" Margin="1011,623,0,0" VerticalAlignment="Top" Width="98" Click="Button_Click"/>
+                    <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="20" Margin="10,10,0,0" TextWrapping="Wrap" Text="Year" VerticalAlignment="Top" Width="38" Foreground="Black"/>
+                    <TextBox x:Name="txtYear" HorizontalAlignment="Left" Margin="10,30,0,0" TextWrapping="Wrap" Text="2016" VerticalAlignment="Top" Height="20" Width="55"/>
+                    <TextBox x:Name="txtMonth" HorizontalAlignment="Left" Margin="79,30,0,0" TextWrapping="Wrap" Text="9" VerticalAlignment="Top" Height="20" Width="55"/>
+                    <TextBox x:Name="txtDay" HorizontalAlignment="Left" Margin="148,30,0,0" TextWrapping="Wrap" Text="8" VerticalAlignment="Top" Height="20" Width="55"/>
+                    <TextBox x:Name="txtHours" HorizontalAlignment="Left" Margin="217,30,0,0" TextWrapping="Wrap" Text="00" VerticalAlignment="Top" Height="20" Width="55"/>
+                    <TextBox x:Name="txtMinutes" HorizontalAlignment="Left" Margin="286,30,0,0" TextWrapping="Wrap" Text="48" VerticalAlignment="Top" Height="20" Width="55"/>
+                    <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Height="20" Margin="79,10,0,0" TextWrapping="Wrap" Text="Month" VerticalAlignment="Top" Width="50" Foreground="Black"/>
+                    <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Height="20" Margin="148,10,0,0" TextWrapping="Wrap" Text="Day" VerticalAlignment="Top" Width="38" Foreground="Black"/>
+                    <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" Height="20" Margin="217,10,0,0" TextWrapping="Wrap" Text="Hours" VerticalAlignment="Top" Width="46" Foreground="Black"/>
+                    <TextBlock x:Name="textBlock_Copy3" HorizontalAlignment="Left" Height="20" Margin="286,10,0,0" TextWrapping="Wrap" Text="Minutes" VerticalAlignment="Top" Width="64" Foreground="Black"/>
+                    <TextBlock x:Name="textBlock_Copy4" HorizontalAlignment="Left" Height="20" Margin="10,75,0,0" TextWrapping="Wrap" Text="VDC" VerticalAlignment="Top" Width="38" Foreground="Black"/>
+                    <TextBox x:Name="txtUnknown31" HorizontalAlignment="Left" Margin="10,96,0,0" TextWrapping="Wrap" Text="d0" VerticalAlignment="Top" Height="20" Width="55" TextChanged="txtUnknown_TextChanged"/>
+                    <TextBlock x:Name="textBlock_Copy5" HorizontalAlignment="Left" Height="20" Margin="79,76,0,0" TextWrapping="Wrap" Text="DC" VerticalAlignment="Top" Width="50" Foreground="Black"/>
+                    <TextBox x:Name="txtUnknown32" HorizontalAlignment="Left" Margin="79,96,0,0" TextWrapping="Wrap" Text="99" VerticalAlignment="Top" Height="20" Width="55" TextChanged="txtUnknown_TextChanged"/>
+                    <TextBlock x:Name="textBlock_Copy6" HorizontalAlignment="Left" Height="20" Margin="148,76,0,0" TextWrapping="Wrap" Text="Batt" VerticalAlignment="Top" Width="38" Foreground="Black"/>
+                    <TextBox x:Name="txtUnknown33" HorizontalAlignment="Left" Margin="148,96,0,0" TextWrapping="Wrap" Text="96" VerticalAlignment="Top" Height="20" Width="55" TextChanged="txtUnknown_TextChanged"/>
+                    <TextBlock x:Name="textBlock_Copy7" HorizontalAlignment="Left" Height="20" Margin="217,78,0,0" TextWrapping="Wrap" Text="Status" VerticalAlignment="Top" Width="46" Foreground="Black"/>
+                    <TextBox x:Name="txtUnknown34" HorizontalAlignment="Left" Margin="217,96,0,0" TextWrapping="Wrap" Text="00" VerticalAlignment="Top" Height="20" Width="133" TextChanged="txtUnknown_TextChanged"/>
+                    <GridView x:Name="gridView" HorizontalAlignment="Left" Height="202" Margin="10,144,0,0" VerticalAlignment="Top" Width="1099" SelectionMode="None" Header="Zone Status">
+                        <CheckBox x:Name="chkGrid1" Content="Zone 1" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" IsTapEnabled="False" IsRightTapEnabled="False" IsHoldingEnabled="False" IsDoubleTapEnabled="False"/>
+                        <CheckBox x:Name="chkGrid2" Content="Zone 2" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" IsTapEnabled="False" IsRightTapEnabled="False" IsHoldingEnabled="False" IsDoubleTapEnabled="False"/>
+                        <CheckBox x:Name="chkGrid4" Content="Zone 3" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" IsTapEnabled="False" IsRightTapEnabled="False" IsHoldingEnabled="False" IsDoubleTapEnabled="False"/>
+                        <CheckBox x:Name="chkGrid8" Content="Zone 4" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" IsTapEnabled="False" IsRightTapEnabled="False" IsHoldingEnabled="False" IsDoubleTapEnabled="False"/>
+                        <CheckBox x:Name="chkGrid16" Content="Zone 5" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" IsTapEnabled="False" IsRightTapEnabled="False" IsHoldingEnabled="False" IsDoubleTapEnabled="False"/>
+                        <CheckBox x:Name="chkGrid32" Content="Zone 6" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" IsTapEnabled="False" IsRightTapEnabled="False" IsHoldingEnabled="False" IsDoubleTapEnabled="False"/>
+                        <CheckBox x:Name="chkGrid64" Content="Zone 7" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" IsTapEnabled="False" IsRightTapEnabled="False" IsHoldingEnabled="False" IsDoubleTapEnabled="False"/>
+                        <CheckBox x:Name="chkGrid128" Content="Zone 8" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" IsTapEnabled="False" IsRightTapEnabled="False" IsHoldingEnabled="False" IsDoubleTapEnabled="False"/>
+                        <CheckBox x:Name="chkGrid1001" Content="Zone 9" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" IsTapEnabled="False" IsRightTapEnabled="False" IsHoldingEnabled="False" IsDoubleTapEnabled="False"/>
+                        <CheckBox x:Name="chkGrid1002" Content="Zone 10" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" IsTapEnabled="False" IsRightTapEnabled="False" IsHoldingEnabled="False" IsDoubleTapEnabled="False"/>
+                        <CheckBox x:Name="chkGrid1004" Content="Zone 11" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" IsTapEnabled="False" IsRightTapEnabled="False" IsHoldingEnabled="False" IsDoubleTapEnabled="False"/>
+                        <CheckBox x:Name="chkGrid1008" Content="Zone 12" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" IsTapEnabled="False" IsRightTapEnabled="False" IsHoldingEnabled="False" IsDoubleTapEnabled="False"/>
+                        <CheckBox x:Name="chkGrid1016" Content="Zone 13" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" IsTapEnabled="False" IsRightTapEnabled="False" IsHoldingEnabled="False" IsDoubleTapEnabled="False"/>
+                        <CheckBox x:Name="chkGrid1032" Content="Zone 14" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" IsTapEnabled="False" IsRightTapEnabled="False" IsHoldingEnabled="False" IsDoubleTapEnabled="False"/>
+                        <CheckBox x:Name="chkGrid1064" Content="Zone 15" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" IsTapEnabled="False" IsRightTapEnabled="False" IsHoldingEnabled="False" IsDoubleTapEnabled="False"/>
+                        <CheckBox x:Name="chkGrid1128" Content="Zone 16" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" IsTapEnabled="False" IsRightTapEnabled="False" IsHoldingEnabled="False" IsDoubleTapEnabled="False"/>
+                        <CheckBox x:Name="chkGrid2001" Content="Zone 17" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" IsTapEnabled="False" IsRightTapEnabled="False" IsHoldingEnabled="False" IsDoubleTapEnabled="False"/>
+                        <CheckBox x:Name="chkGrid2002" Content="Zone 18" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" IsTapEnabled="False" IsRightTapEnabled="False" IsHoldingEnabled="False" IsDoubleTapEnabled="False"/>
+                        <CheckBox x:Name="chkGrid2004" Content="Zone 19" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" IsTapEnabled="False" IsRightTapEnabled="False" IsHoldingEnabled="False" IsDoubleTapEnabled="False"/>
+                        <CheckBox x:Name="chkGrid2008" Content="Zone 20" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" IsTapEnabled="False" IsRightTapEnabled="False" IsHoldingEnabled="False" IsDoubleTapEnabled="False"/>
+                        <CheckBox x:Name="chkGrid2016" Content="Zone 21" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" IsTapEnabled="False" IsRightTapEnabled="False" IsHoldingEnabled="False" IsDoubleTapEnabled="False"/>
+                        <CheckBox x:Name="chkGrid2032" Content="Zone 22" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" IsTapEnabled="False" IsRightTapEnabled="False" IsHoldingEnabled="False" IsDoubleTapEnabled="False"/>
+                        <CheckBox x:Name="chkGrid2064" Content="Zone 23" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" IsTapEnabled="False" IsRightTapEnabled="False" IsHoldingEnabled="False" IsDoubleTapEnabled="False"/>
+                        <CheckBox x:Name="chkGrid2128" Content="Zone 24" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" IsTapEnabled="False" IsRightTapEnabled="False" IsHoldingEnabled="False" IsDoubleTapEnabled="False"/>
+                        <CheckBox x:Name="chkGrid3001" Content="Zone 25" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" IsTapEnabled="False" IsRightTapEnabled="False" IsHoldingEnabled="False" IsDoubleTapEnabled="False"/>
+                        <CheckBox x:Name="chkGrid3002" Content="Zone 26" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" IsTapEnabled="False" IsRightTapEnabled="False" IsHoldingEnabled="False" IsDoubleTapEnabled="False"/>
+                        <CheckBox x:Name="chkGrid3004" Content="Zone 27" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" IsTapEnabled="False" IsRightTapEnabled="False" IsHoldingEnabled="False" IsDoubleTapEnabled="False"/>
+                        <CheckBox x:Name="chkGrid3008" Content="Zone 28" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" IsTapEnabled="False" IsRightTapEnabled="False" IsHoldingEnabled="False" IsDoubleTapEnabled="False"/>
+                        <CheckBox x:Name="chkGrid3016" Content="Zone 29" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" IsTapEnabled="False" IsRightTapEnabled="False" IsHoldingEnabled="False" IsDoubleTapEnabled="False"/>
+                        <CheckBox x:Name="chkGrid3032" Content="Zone 30" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" IsTapEnabled="False" IsRightTapEnabled="False" IsHoldingEnabled="False" IsDoubleTapEnabled="False"/>
+                        <CheckBox x:Name="chkGrid3064" Content="Zone 31" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" IsTapEnabled="False" IsRightTapEnabled="False" IsHoldingEnabled="False" IsDoubleTapEnabled="False"/>
+                        <CheckBox x:Name="chkGrid3128" Content="Zone 32" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" IsTapEnabled="False" IsRightTapEnabled="False" IsHoldingEnabled="False" IsDoubleTapEnabled="False"/>
+                    </GridView>
+                    <TextBlock x:Name="txtEvent" HorizontalAlignment="Left" Height="232" Margin="15,385,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="1094"/>
+
+                </Grid>
+            </PivotItem>
+            <PivotItem Header="Settings" Margin="10,0,14,0">
+                <Grid>
+                    <TextBox x:Name="txtIP" HorizontalAlignment="Left" Height="60" Margin="42,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202" Header="IP150 Module Address"/>
+                    <TextBox x:Name="txtPort" HorizontalAlignment="Left" Height="60" Margin="42,96,0,0" TextWrapping="Wrap" Text="10000" VerticalAlignment="Top" Width="202" Header="IP150 Module Port"/>
+                    <PasswordBox x:Name="txtPassword" HorizontalAlignment="Left" Height="60" Margin="42,156,0,0"  PlaceholderText="Inserire password" VerticalAlignment="Top" Width="202" Header="IP150 Module Password"/>
+                    <TextBox x:Name="mqttIP" HorizontalAlignment="Left" Height="60" Margin="298,36,0,0" TextWrapping="Wrap" Text="192.168.1.6" VerticalAlignment="Top" Width="202" Header="MQTT Broker Address"/>
+                    <TextBox x:Name="mqttPort" HorizontalAlignment="Left" Height="60" Margin="298,96,0,0" TextWrapping="Wrap" Text="1883" VerticalAlignment="Top" Width="202" Header="MQTT Broker Port"/>
+                    <PasswordBox x:Name="mqttPassword" HorizontalAlignment="Left" Height="60" Margin="298,156,0,0"  PlaceholderText="Inserire password" Password="" VerticalAlignment="Top" Width="202" Header="MQTT Broker Password"/>
+
+                </Grid>
+            </PivotItem>
+        </Pivot>
+
+        </RelativePanel>
+
+    </Grid>
+    <Page.BottomAppBar>
+        <CommandBar DefaultLabelPosition="Right">
+            <AppBarButton x:Name="btnConnect" Label="Connect" Click="Button_Click" />
+            <AppBarSeparator/>
+            <!--
+            <CommandBar.SecondaryCommands>
+                <AppBarButton Label="Switch" Click="btnSend_Click"/>
+            </CommandBar.SecondaryCommands>
+            -->
+            <CommandBar.Content>
+                <TextBlock x:Name="txtStatus" Text="Status: Not Connected" Margin="12,14"/>
+            </CommandBar.Content>
+        </CommandBar>
+    </Page.BottomAppBar>
+    
+</Page>
