@@ -1,5 +1,6 @@
-# Paradox-UWP
-Simple UWP for Win10 Mobile &amp; Desktop to connect to Paradox Alarm Systems
+.# Paradox-UWP
+Simple UWP for Win10 Mobile &amp; Desktop to connect to Paradox Alarm Systems.
+
 This app allows connecting to SP6000 (and probably other) Paradox Alarm Systems using the IP150 IP connection module.
 I created this app since the original iParadox app is not available for WinPhones (only Android and iOS...sigh).
 Tested from both LAN and external connection, it's very simple and basic but it works...there are of course still a lot of things to be implemented and checked (I've been learning C# while creating this app so please have mercy on me!)
